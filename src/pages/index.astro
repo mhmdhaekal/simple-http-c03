@@ -2,10 +2,12 @@
 import Layout from "../layouts/Layout.astro";
 import Prose from "../components/astro/prose.astro";
 import Content from "../components/markdown/index.mdx";
+
+let astro_ip_address = Astro.clientAddress;
 ---
 
 <Layout>
 	<Prose>
-		<Content/>
+		<Content client:load ip_address={astro_ip_address} />
 	</Prose>
 </Layout>
