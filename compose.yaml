@@ -1,5 +1,5 @@
 services:
-  test-web:
+  web-seleno:
     container-name: test-web
     ports:
       - 80:3000
