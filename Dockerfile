@@ -24,6 +24,7 @@ COPY --from=prerelease /app/package.json ./package.json
 COPY --from=prerelease  /app/dist ./dist
 
 ENV PORT="3000"
+ENV HOST="0.0.0.0"
 ENV NODE_ENV="production"
 
 CMD ["bun", "./dist/server/entry.mjs"]
